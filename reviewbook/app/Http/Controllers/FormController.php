@@ -8,7 +8,7 @@ class FormController extends Controller
 {
     public function register()
     {
-        return view('form');
+        return view('page.form');
     }
 
     public function signup(Request $request) 
@@ -19,7 +19,7 @@ class FormController extends Controller
         $nationality = $request->input('nationality');
         $language = $request->input('language');
 
-        return view("welcome", ['firstname' => $firstname, 'lastname' => $lastname, 'gender' => $gender, 
+        return view("page.welcome", ['firstname' => $firstname, 'lastname' => $lastname, 'gender' => $gender, 
         'nationality' => $nationality, 'language' => $language]);
     }
 }
